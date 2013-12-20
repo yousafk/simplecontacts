@@ -1,0 +1,116 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Simple Contacts by yousafk</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1 class="header">Simple Contacts</h1>
+        <p class="header">Dissect JSON file to show data in a list view with details page searchable by pages and data</p>
+
+        <ul>
+          <li class="download"><a class="buttons" href="https://github.com/yousafk/simplecontacts/zipball/master">Download ZIP</a></li>
+          <li class="download"><a class="buttons" href="https://github.com/yousafk/simplecontacts/tarball/master">Download TAR</a></li>
+          <li><a class="buttons github" href="https://github.com/yousafk/simplecontacts">View On GitHub</a></li>
+        </ul>
+
+        <p class="header">This project is maintained by <a class="header name" href="https://github.com/yousafk">yousafk</a></p>
+
+
+      </header>
+      <section>
+        <h1>
+<a name="simple-contacts-with-jquerymobile--bootstrap" class="anchor" href="#simple-contacts-with-jquerymobile--bootstrap"><span class="octicon octicon-link"></span></a>Simple Contacts with JQueryMobile + BootStrap</h1>
+
+<p>Dissect a JSON file of contacts into a list page of contacts marked by badges with a details page with formatted data. Ability to search the data with numbers and names. Useful for hosting your own contacts directory online, for school or friends, or can even be altered for a list of various forms of data</p>
+
+<p><img src="http://i.imgur.com/ZDoIFwU.png" alt="List View"><img src="http://i.imgur.com/UQyctQd.png?1" alt="Details Page"></p>
+
+<h2>
+<a name="default-json-format" class="anchor" href="#default-json-format"><span class="octicon octicon-link"></span></a>Default JSON Format</h2>
+
+<p><code>[{
+        id:"",
+        "position":"",
+        "lname":"",
+        "fname":"",
+        "dayPhone":"",
+        "cellPhone":"",
+        "eveningPhone":"",
+        "picture":""
+    }]</code></p>
+
+<p>If the format is altered, it must be altered in the main.js such as in the sorting function.
+<code>//sort the list of contents alphabetically
+    data.sort(sort_by("fname", true, function (a) {
+                    return a.toUpperCase()
+        }));
+</code></p>
+
+<h2>
+<a name="showing-json-data-to-html" class="anchor" href="#showing-json-data-to-html"><span class="octicon octicon-link"></span></a>Showing JSON data to HTML</h2>
+
+<p>Just use the html function, pass the object and key. 
+Variable such as contact.fname and contact.lname may be changed if changed in the JSON file.</p>
+
+<p><code>$("div.name").html(contact.fname + " " + contact.lname);</code></p>
+
+<h2>
+<a name="html-file-should-have" class="anchor" href="#html-file-should-have"><span class="octicon octicon-link"></span></a>HTML file should have:</h2>
+
+<p>`</p><div>
+
+<pre><code>  &lt;div data-role="header"&gt;
+        &lt;a id="backbutton" class="header-icon ui-bar-a" data-rel="back" data-role="button"&gt;&lt;img src="images/back.png" /&gt;&lt;/a&gt; 
+        &lt;h1&gt;Details&lt;/h1&gt;
+  &lt;/div&gt;
+
+&lt;div data-role="content" id="details"&gt;             
+
+        &lt;span&gt;name&lt;/span&gt;
+        &lt;div class="name"&gt;
+        &lt;/div&gt;
+
+        &lt;span&gt;position&lt;/span&gt;
+        &lt;div class="position"&gt;
+        &lt;/div&gt;
+
+        &lt;span&gt;day phone&lt;/span&gt;
+        &lt;div class="dayPhone"&gt;
+        &lt;/div&gt;
+
+        &lt;span&gt;cell phone&lt;/span&gt;
+        &lt;div class="cellPhone"&gt;
+        &lt;/div&gt;
+
+        &lt;span&gt;evening phone&lt;/span&gt;
+        &lt;div class="eveningPhone"&gt;
+        &lt;/div&gt;
+
+
+        &lt;div class="picture"&gt;
+        &lt;/div&gt; 
+&lt;/div&gt;
+&lt;/div&gt;&lt;!-- /page --&gt;`
+</code></pre>
+</div>
+      </section>
+      <footer>
+        <p><small>Hosted on <a href="http://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+		
+  </body>
+</html>
