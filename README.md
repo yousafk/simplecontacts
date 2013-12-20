@@ -1,35 +1,31 @@
-### Simple Contacts with JQueryMobile + BootStrap
-Dissect a JSON file of contacts into a list page of contacts marked by badges with a details page with formatted data. Ability to search the data with numbers and names</p>
-<h1>Useful for hosting your own contacts directory online, for school or friends, or can even be altered for a list of various forms of data
+# Simple Contacts with JQueryMobile + BootStrap
+Dissect a JSON file of contacts into a list page of contacts marked by badges with a details page with formatted data. Ability to search the data with numbers and names. Useful for hosting your own contacts directory online, for school or friends, or can even be altered for a list of various forms of data
 
-![List View]("http://i.imgur.com/ZDoIFwU.png" "List View")
-![List View]("http://i.imgur.com/UQyctQd.png?1" "Details Page")
+![List View](http://i.imgur.com/ZDoIFwU.png)![Details Page](http://i.imgur.com/UQyctQd.png?1)
 
 ## Default JSON Format
-
 `[{
-		id:"",
-		"position":"",
-		"lname":"",
-		"fname":"",
-		"dayPhone":"",
-		"cellPhone":"",
-		"eveningPhone":"",
-		"picture":""
-	}]`
+        id:"",
+        "position":"",
+        "lname":"",
+        "fname":"",
+        "dayPhone":"",
+        "cellPhone":"",
+        "eveningPhone":"",
+        "picture":""
+    }]`
 
-If the format is altered, it must be altered in the main.js such as in the sorting function
+If the format is altered, it must be altered in the main.js such as in the sorting function.
 `//sort the list of contents alphabetically
- 	data.sort(sort_by("fname", true, function (a) {
+    data.sort(sort_by("fname", true, function (a) {
                     return a.toUpperCase()
-    	}));
+        }));
 `
 ## Showing JSON data to HTML
 Just use the html function, pass the object and key. 
 Variable such as contact.fname and contact.lname may be changed if changed in the JSON file.
 
 `$("div.name").html(contact.fname + " " + contact.lname);`
-If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.
 
 ## HTML file should have: 
 `<div data-role="page" id="contact-details">
@@ -39,7 +35,7 @@ If you're using the GitHub for Mac, simply sync your repository and you'll see t
             <h1>Details</h1>
       </div>
 
-	<div data-role="content" id="details">             
+    <div data-role="content" id="details">             
 
             <span>name</span>
             <div class="name">
